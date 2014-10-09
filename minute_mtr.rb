@@ -5,7 +5,6 @@ class String
   def blue;           "\033[34m#{self}\033[0m" end
   def cyan;           "\033[36m#{self}\033[0m" end
 end
-
 unless ARGV.size == 3
   print "Usage is minute_mtr.rb ".blue
   puts "<DESTINATION> <FILE_DEST> <MAX HOURS>".cyan
