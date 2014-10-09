@@ -1,7 +1,16 @@
 #!/usr/bin/ruby
+class String
+  def red;            "\033[31m#{self}\033[0m" end
+  def green;          "\033[32m#{self}\033[0m" end
+  def blue;           "\033[34m#{self}\033[0m" end
+  def cyan;           "\033[36m#{self}\033[0m" end
+end
+
 unless ARGV.size == 3
-  puts "Usage is minute_mtr.rb <DESTINATION> <FILE_DEST> <MAX HOURS>"
-  puts "Example minute_mtr.rb google.com /var/tmp/ 168 &"
+  print "Usage is minute_mtr.rb ".blue
+  puts "<DESTINATION> <FILE_DEST> <MAX HOURS>".cyan
+  print "Example minute_mtr.rb ".blue
+  puts "google.com /var/tmp/ 168 & ".green
   exit 1
 end
 hdest, fsdest, max_age = ARGV[0],ARGV[1],ARGV[2].to_i
@@ -10,7 +19,7 @@ unless File.exists?(fsdest)
   exit 2
 end
 unless max_age > 0
-  puts "Max age must be greater than zero! I don't want to remove ALL your files!"
+  puts "Max age must be greater than zero! I don't want to remove ALL your files!".red
   exit 3
 end
 def f_age(name)
