@@ -2,7 +2,7 @@
 hdest,fsdest = ARGV
 if ARGV.empty?
   puts "Improper usage!!"
-  puts "Try minute_mtr.rb DESTINATION FILE_DEST"
+  puts "Usage is minute_mtr.rb DESTINATION FILE_DEST"
   puts "Example minute_mtr.rb google.com /var/tmp/"
 abort
 end

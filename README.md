@@ -1,4 +1,7 @@
-minute_mtr.rb
+minute_mtr
 =============
 
-This will print out text files of MTRs using Ruby
+## What is minute_mtr?
+**This tiny project will print out text files of MTRs using Ruby to the path specified.
+  * Usage is minute_mtr.rb DESTINATION FILE_DEST
+  * Example minute_mtr.rb google.com /var/tmp/
