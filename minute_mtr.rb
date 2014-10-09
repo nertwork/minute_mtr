@@ -6,6 +6,6 @@ end
 while true do
   mtr = `mtr -b -r -c 1 #{hdest}`
   File.open("#{fsdest}#{hdest}__#{tstamp}.txt", 'w') { |f| f.write(mtr)}
-  sleep 5
+  sleep 60
 end
 
