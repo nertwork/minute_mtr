@@ -12,7 +12,7 @@ unless ARGV.size == 3
   puts "google.com /var/tmp/ 168 & ".green
   exit 1
 end
-hdest, fsdest, max_age = ARGV[0],ARGV[1],ARGV[2].to_i
+hdest, fsdest, max_age = ARGV[0],ARGV[1],ARGV[2].to_f
 unless File.exists?(fsdest)
   puts "Bad directory #{fsdest}!"
   exit 2
